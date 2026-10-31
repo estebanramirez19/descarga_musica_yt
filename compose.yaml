@@ -1,0 +1,9 @@
+services:
+  pulso:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      MUSICA_USERNAME: ${MUSICA_USERNAME:?define MUSICA_USERNAME en .env}
+      MUSICA_PASSWORD: ${MUSICA_PASSWORD:?define MUSICA_PASSWORD en .env}
