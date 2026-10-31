@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11130f">
+  <title>Pulso — Descarga música en MP3</title>
+  <meta name="description" content="Descarga audio de YouTube directamente en tu dispositivo.">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="nav shell">
+    <a class="brand" href="#top" aria-label="Pulso, inicio"><span class="brand-mark">P</span><span>PULSO</span></a>
+    <div class="library-count"><span class="live-dot"></span><span>DESCARGA DIRECTA</span></div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="eyebrow">YOUTUBE · MP3 · DESCARGA DIRECTA</div>
+      <h1>La música que quieres.<br><em>Sin rodeos.</em></h1>
+      <p class="hero-copy">Pega un enlace de YouTube. Pulso prepara el MP3 y tu navegador lo guarda directamente en la carpeta de descargas de este dispositivo.</p>
+
+      <form id="download-form" class="download-card">
+        <label for="url">Enlace de YouTube</label>
+        <div class="input-row">
+          <input id="url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://youtube.com/watch?v=…" required>
+          <button type="submit"><span>Descargar</span><span aria-hidden="true">↓</span></button>
+        </div>
+        <p id="form-status" class="form-error" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="shell"><span>PULSO</span><span>Los archivos no se guardan en el servidor.</span></footer>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
